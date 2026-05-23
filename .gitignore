@@ -1,0 +1,18 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales
+venv/
+env/
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
