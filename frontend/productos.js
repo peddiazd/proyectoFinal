@@ -1,6 +1,8 @@
 // productos.js
 // Agente: Hormiga
 // Rol: Integrador del sistema
+// Descripcion: Maneja la logica de categorias y productos
+// en la pagina productos.html.
 
 const PRODUCTOS = {
     anime: [
@@ -22,8 +24,8 @@ const PRODUCTOS = {
     naturaleza: [
         { nombre: 'Botanical verde', emoji: '🌿', bg: 'linear-gradient(135deg,#1b5e20,#4caf50)', label: 'VERDE', badge: 'top' },
         { nombre: 'Flores silvestres', emoji: '🌸', bg: 'linear-gradient(135deg,#fce4ec,#f48fb1)', label: 'FLORES', badge: '', textColor: '#880e4f', borderColor: 'rgba(194,24,91,0.3)' },
-        { nombre: 'Montañas', emoji: '🏔️', bg: 'linear-gradient(135deg,#263238,#546e7a)', label: 'MOUNTAINS', badge: '' },
-        { nombre: 'Océano', emoji: '🌊', bg: 'linear-gradient(135deg,#01579b,#0288d1)', label: 'OCEAN', badge: 'nuevo' },
+        { nombre: 'Montanas', emoji: '🏔️', bg: 'linear-gradient(135deg,#263238,#546e7a)', label: 'MOUNTAINS', badge: '' },
+        { nombre: 'Oceano', emoji: '🌊', bg: 'linear-gradient(135deg,#01579b,#0288d1)', label: 'OCEAN', badge: 'nuevo' },
         { nombre: 'Cactus', emoji: '🌵', bg: 'linear-gradient(135deg,#33691e,#7cb342)', label: 'CACTUS', badge: '' },
         { nombre: 'Amanecer', emoji: '🌅', bg: 'linear-gradient(135deg,#ff6f00,#ffa000)', label: 'DAWN', badge: '' },
     ],
@@ -72,6 +74,12 @@ function getCategoriaURL() {
     return params.get('cat') || 'anime';
 }
 
+function comprar(nombre) {
+    const mensaje = `Hola LuminPrint! 👋 Quiero comprar:\n\n☕ Taza: ${nombre}\n\nPor favor indicame los siguientes pasos para completar mi pedido!`;
+    const whatsapp = `https://wa.me/573100000000?text=${encodeURIComponent(mensaje)}`;
+    window.open(whatsapp, '_blank');
+}
+
 function renderizarProductos(categoria) {
     const grid = document.getElementById('productsGrid');
     const productos = PRODUCTOS[categoria] || PRODUCTOS['anime'];
@@ -110,7 +118,7 @@ function renderizarProductos(categoria) {
                 </div>
                 <div class="product-footer">
                     <div class="product-price">$10.000 <span>COP</span></div>
-                    <button class="buy-btn">Comprar</button>
+                    <button class="buy-btn" onclick="comprar('${p.nombre}')">Comprar</button>
                 </div>
             </div>
         `;
