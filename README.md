@@ -1,36 +1,38 @@
-# LuminPrint - Chatbot para Tazas Personalizadas
+# LuminPrint — Chatbot de Atención al Cliente
 
-## Descripcion
-Tienda online de tazas personalizadas con chatbot IA integrado que responde dudas sobre calidad, envios, personalizacion y precios. Dirigida a jovenes de 13-25 anos en Medellin, Colombia.
+## ¿Qué es esto?
+LuminPrint es una tienda online de tazas personalizadas en Medellín, Colombia.
+Este proyecto implementa un chatbot asistente disponible 24/7 que responde
+automáticamente las dudas más frecuentes de los clientes usando un
+Árbol Binario de Búsqueda (BST) implementado en Python puro.
 
-## Problema que resuelve
-El 70% de los carritos en e-commerce se abandonan por dudas sin resolver. LuminPrint no contaba con ningun canal de atencion al cliente. Este chatbot resuelve las dudas mas frecuentes de forma automatica 24/7.
+## Estructura de datos utilizada
+**Árbol Binario de Búsqueda (BST)** — cada nodo representa una palabra clave
+normalizada. La búsqueda tiene complejidad O(log n).
 
-## Caracteristicas
-- Interfaz moderna con degradados morado y rojo
-- Chatbot flotante interactivo disponible 24/7
-- Respuestas automaticas a preguntas frecuentes
-- Galeria de productos con precios
-- Sin APIs externas ni costos adicionales
+## Requisitos
+- Python 3.8 o superior
+- pip
 
-## Tecnologias
-- HTML5
-- CSS3 (Gradientes, Glassmorphism, Animaciones)
-- JavaScript Vanilla
+## Instalación
+```bash
+git clone https://github.com/peddiazd/proyectoFinal.git
+cd proyectoFinal
+pip install -r requirements.txt
+```
 
-## Como ejecutar
-1. Clona el repositorio
-2. Entra a la carpeta del proyecto
-3. Ejecuta: python3 -m http.server 8000
-4. Abre el navegador en: http://localhost:8000
+## Ejecución
+```bash
+cd backend
+python app.py
+```
 
-## Estructura
-- index.html: Redirige al dashboard principal
-- src/dashboard/dashboard.html: Interfaz visual de la tienda
-- src/dashboard/dashboard.js: Logica del chatbot
-- AGENTS.md: Documentacion de agentes IA usados
-- docs/ANALISIS_TECNICO.md: Analisis tecnico del proyecto
-- prompts/HISTORIAL_PROMPTS.md: Historial de prompts usados
+Abre tu navegador en: `http://localhost:5000`
 
-## Autor
-Pedro Diaz - Universidad Cooperativa de Colombia - 2026
+## Estructura del proyecto
+
+## Agentes del proyecto
+Ver `AGENTS.md` para la descripción completa de cada agente.
+
+## Universidad Cooperativa de Colombia
+Estructuras de Datos · 2026
