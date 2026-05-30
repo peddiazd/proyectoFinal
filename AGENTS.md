@@ -26,9 +26,10 @@ una palabra clave normalizada. La búsqueda tiene complejidad O(log n).
 ### 🦅 Águila
 **Rol:** Investigador de conocimiento
 **Funciones:**
-- Investigar en fuentes reales las preguntas frecuentes de clientes en tiendas de productos personalizados.
+- Investigar las preguntas frecuentes reales de clientes en tiendas de productos personalizados.
 - Agrupar las preguntas por categoría: personalización, pedidos, envíos, pagos, devoluciones y productos.
-- Entregar la lista curada como insumo para el agente Castor.
+- Entregar la lista estructurada como insumo para el agente Castor.
+- Producir el archivo `backend/preguntas_faq.py`.
 
 ---
 
