@@ -1004,3 +1004,198 @@ a {
 .chat-btn:hover {
     transform: scale(1.05);
 }
+/* ── PERSONALIZAR ───────────────────────────────── */
+.custom-form-section {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px solid #f0e6f6;
+}
+
+.custom-form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a0033;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+.taza-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.taza-option {
+    border: 0.5px solid #ede0f5;
+    border-radius: 8px;
+    padding: 16px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.taza-option:hover {
+    border-color: #2d0052;
+    background: #f9f0ff;
+}
+
+.taza-option.active {
+    border-color: #2d0052;
+    background: #f9f0ff;
+}
+
+.taza-icon {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.taza-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a0033;
+    margin-bottom: 2px;
+}
+
+.taza-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e91e8c;
+    margin-bottom: 2px;
+}
+
+.taza-desc {
+    font-size: 10px;
+    color: #bbb;
+}
+
+.upload-area {
+    border: 1.5px dashed #ede0f5;
+    border-radius: 8px;
+    padding: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.upload-area:hover {
+    border-color: #2d0052;
+    background: #f9f0ff;
+}
+
+.upload-icon {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.upload-text {
+    font-size: 13px;
+    color: #2d0052;
+    font-weight: 500;
+}
+
+.upload-sub {
+    font-size: 11px;
+    color: #bbb;
+}
+
+.upload-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-preview img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 0.5px solid #ede0f5;
+}
+
+.remove-img {
+    background: transparent;
+    border: 1px solid #e91e8c;
+    color: #e91e8c;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.form-input {
+    width: 100%;
+    border: 0.5px solid #ede0f5;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #1a0033;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: #2d0052;
+}
+
+.form-hint {
+    font-size: 10px;
+    color: #bbb;
+    margin-top: 4px;
+}
+
+.form-textarea {
+    width: 100%;
+    border: 0.5px solid #ede0f5;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #1a0033;
+    outline: none;
+    height: 100px;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.form-textarea:focus {
+    border-color: #2d0052;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #2d0052;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 8px;
+}
+
+.submit-btn:hover {
+    background: #e91e8c;
+}
+
+.submit-hint {
+    font-size: 11px;
+    color: #bbb;
+    text-align: center;
+}
