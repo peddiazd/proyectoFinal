@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminPrint — Tazas Personalizadas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="nav">
+        <div class="logo">LUMI<span>N</span>PRINT</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active">Inicio</a>
+            <a href="galeria.html" class="nav-link">Galería</a>
+            <a href="productos.html" class="nav-link">Productos</a>
+            <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+        <a href="productos.html" class="nav-cta">Personalizar</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-tag">✦ Medellín, Colombia · Envíos nacionales</div>
+            <h1>Tu taza,<br>tu <em>identidad</em></h1>
+            <p>Tazas personalizadas con diseños únicos desde $10.000 COP. Elige entre nuestras categorías o crea la tuya desde cero.</p>
+            <div class="hero-btns">
+                <a href="productos.html" class="btn-main">Ver productos</a>
+                <a href="productos.html" class="btn-ghost">Personalizar</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="mug-circle">☕</div>
+        </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="cats-section">
+        <div class="cats-header">
+            <div class="section-label">Categorías</div>
+            <h2 class="section-title">¿Qué estilo te representa?</h2>
+            <p class="section-sub">Selecciona una categoría para ver los diseños disponibles</p>
+        </div>
+        <div class="cats-grid">
+            <a href="productos.html?cat=anime" class="cat-card">
+                <div class="cat-icon">⚡</div>
+                <div class="cat-name">Anime</div>
+                <div class="cat-count">12 diseños</div>
+                <div class="cat-arrow">Ver →</div>
+            </a>
+            <a href="productos.html?cat=frases" class="cat-card">
+                <div class="cat-icon">✍️</div>
+                <div class="cat-name">Frases</div>
+                <div class="cat-count">18 diseños</div>
+                <div class="cat-arrow">Ver →</div>
+            </a>
+            <a href="productos.html?cat=naturaleza" class="cat-card">
+                <div class="cat-icon">🍃</div>
+                <div class="cat-name">Naturaleza</div>
+                <div class="cat-count">10 diseños</div>
+                <div class="cat-arrow">Ver →</div>
+            </a>
+            <a href="productos.html?cat=minimalista" class="cat-card">
+                <div class="cat-icon">◻️</div>
+                <div class="cat-name">Minimalista</div>
+                <div class="cat-count">15 diseños</div>
+                <div class="cat-arrow">Ver →</div>
+            </a>
+            <a href="productos.html?cat=fotos" class="cat-card">
+                <div class="cat-icon">📷</div>
+                <div class="cat-name">Fotos</div>
+                <div class="cat-count">Personalizado</div>
+                <div class="cat-arrow">Ver →</div>
+            </a>
+            <a href="productos.html?cat=aesthetic" class="cat-card">
+                <div class="cat-icon">🌙</div>
+                <div class="cat-name">Aesthetic</div>
+                <div class="cat-count">14 diseños</div>
+                <div class="cat-arrow">Ver →</div>
+            </a>
+            <a href="productos.html?cat=musica" class="cat-card">
+                <div class="cat-icon">🎵</div>
+                <div class="cat-name">Música</div>
+                <div class="cat-count">8 diseños</div>
+                <div class="cat-arrow">Ver →</div>
+            </a>
+            <a href="productos.html?cat=regalos" class="cat-card">
+                <div class="cat-icon">🎁</div>
+                <div class="cat-name">Regalos</div>
+                <div class="cat-count">9 diseños</div>
+                <div class="cat-arrow">Ver →</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stat">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Clientes felices</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">86+</div>
+            <div class="stat-label">Diseños disponibles</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Soporte activo</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">3–5</div>
+            <div class="stat-label">Días de entrega</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">LUMINPRINT</div>
+        <div class="footer-links">
+            <span class="footer-link">Instagram</span>
+            <span class="footer-link">TikTok</span>
+            <span class="footer-link">WhatsApp</span>
+        </div>
+        <div class="footer-copy">© 2026 LuminPrint · Medellín</div>
+    </footer>
+
+    <!-- CHATBOT FLOTANTE -->
+    <div class="chat-float" id="chatFloat">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">💬</div>
+                    <div>
+                        <div class="chat-name">LuminBot</div>
+                        <div class="chat-status">En línea · 24/7</div>
+                    </div>
+                </div>
+                <button class="chat-close" id="chatClose">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="msg bot">
+                    <div class="msg-bubble">¡Hola! 👋 Soy LuminBot. ¿En qué te puedo ayudar hoy?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." />
+                <button id="chatSend">→</button>
+            </div>
+        </div>
+        <button class="chat-btn" id="chatToggle">💬</button>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
