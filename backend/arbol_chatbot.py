@@ -1,56 +1,30 @@
 # arbol_chatbot.py
 # Agente: Pulpo
-# Rol: Constructor del árbol BST
-# Descripción: Implementa desde cero las clases Nodo y ArbolBST.
-# Recibe la base de datos de Castor y la organiza en un árbol
-# binario de búsqueda para responder las dudas del usuario.
+# Rol: Constructor del arbol BST
+# Descripcion: Implementa desde cero las clases Nodo y ArbolBST.
+# Recibe la base de datos de Castor y la organiza en un arbol
+# binario de busqueda para responder las dudas del usuario.
 
 import unicodedata
 from base_datos import BASE_CONOCIMIENTO
 
-
-# ──────────────────────────────────────────────
-# CLASE NODO
-# Unidad básica del árbol. Cada nodo representa
-# un par clave-respuesta.
-# ──────────────────────────────────────────────
 class Nodo:
     def __init__(self, clave, respuesta):
-        self.clave = clave          # palabra clave normalizada
-        self.respuesta = respuesta  # respuesta que verá el usuario
-        self.izquierdo = None       # hijo izquierdo
-        self.derecho = None         # hijo derecho
+        self.clave = clave
+        self.respuesta = respuesta
+        self.izquierdo = None
+        self.derecho = None
 
-
-# ──────────────────────────────────────────────
-# CLASE ARBOLBST
-# Árbol Binario de Búsqueda que organiza todas
-# las claves de la base de datos y permite
-# buscar en O(log n).
-# ──────────────────────────────────────────────
 class ArbolBST:
     def __init__(self):
-        self.raiz = None  # el árbol comienza vacío
+        self.raiz = None
 
-    # ── NORMALIZAR ────────────────────────────
-    # Convierte el mensaje del usuario en una
-    # clave limpia: minúsculas, sin tildes,
-    # sin caracteres especiales.
-    # Ejemplo: "Lavavajillas?" → "lavavajillas"
     def normalizar(self, texto):
         texto = texto.lower()
         texto = unicodedata.normalize('NFD', texto)
-        texto = ''.join(
-            c for c in texto
-            if unicodedata.category(c) != 'Mn'
-        )
+        texto = ''.join(c for c in texto if unicodedata.category(c) != 'Mn')
         return texto
 
-    # ── INSERTAR ──────────────────────────────
-    # Agrega un nuevo nodo al árbol.
-    # Si la clave es menor va a la izquierda,
-    # si es mayor va a la derecha.
-    # Complejidad: O(log n)
     def insertar(self, clave, respuesta):
         nuevo = Nodo(clave, respuesta)
         if self.raiz is None:
@@ -70,17 +44,17 @@ class ArbolBST:
             else:
                 self._insertar_rec(nodo.derecho, nuevo)
 
-    # ── BUSCAR ────────────────────────────────
-    # Recorre el árbol buscando una palabra clave
-    # dentro del mensaje del usuario.
-    # Complejidad: O(log n)
     def buscar(self, mensaje):
-        palabras = self.normalizar(mensaje).split()
+        mensaje_normalizado = self.normalizar(mensaje)
+        palabras = mensaje_normalizado.split()
         for palabra in palabras:
             resultado = self._buscar_rec(self.raiz, palabra)
             if resultado:
                 return resultado
-        return "😅 Hmm no entendí bien tu pregunta. Puedes preguntarme sobre envíos, pagos, personalización, productos o devoluciones!"
+        resultado = self._buscar_parcial(self.raiz, mensaje_normalizado)
+        if resultado:
+            return resultado
+        return "😅 Hmm no entendi bien tu pregunta. Puedes preguntarme sobre envios, pagos, personalizacion, productos o devoluciones!"
 
     def _buscar_rec(self, nodo, clave):
         if nodo is None:
@@ -92,9 +66,16 @@ class ArbolBST:
         else:
             return self._buscar_rec(nodo.derecho, clave)
 
-    # ── CONSTRUIR ─────────────────────────────
-    # Inserta toda la base de datos en el árbol.
-    # Se ejecuta una sola vez al iniciar la app.
+    def _buscar_parcial(self, nodo, mensaje):
+        if nodo is None:
+            return None
+        if nodo.clave in mensaje:
+            return nodo.respuesta
+        izq = self._buscar_parcial(nodo.izquierdo, mensaje)
+        if izq:
+            return izq
+        return self._buscar_parcial(nodo.derecho, mensaje)
+
     def construir(self):
         for clave, respuesta in BASE_CONOCIMIENTO:
             self.insertar(clave, respuesta)
