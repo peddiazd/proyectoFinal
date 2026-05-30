@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos — LuminPrint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="nav">
+        <div class="logo">LUMI<span>N</span>PRINT</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="galeria.html" class="nav-link">Galería</a>
+            <a href="productos.html" class="nav-link active">Productos</a>
+            <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+        <a href="productos.html" class="nav-cta">Personalizar</a>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <div class="section-label">Productos</div>
+        <h1 class="page-title" id="pageTitle">Categoría: Anime ⚡</h1>
+        <p class="page-sub">Selecciona un diseño y elige el tipo de taza que prefieres</p>
+    </section>
+
+    <!-- CONTENIDO -->
+    <div class="products-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-title">Categorías</div>
+            <a href="?cat=anime" class="cat-item" data-cat="anime">
+                <span class="cat-item-icon">⚡</span>
+                <span class="cat-item-name">Anime</span>
+                <span class="cat-item-count">12</span>
+            </a>
+            <a href="?cat=frases" class="cat-item" data-cat="frases">
+                <span class="cat-item-icon">✍️</span>
+                <span class="cat-item-name">Frases</span>
+                <span class="cat-item-count">18</span>
+            </a>
+            <a href="?cat=naturaleza" class="cat-item" data-cat="naturaleza">
+                <span class="cat-item-icon">🍃</span>
+                <span class="cat-item-name">Naturaleza</span>
+                <span class="cat-item-count">10</span>
+            </a>
+            <a href="?cat=minimalista" class="cat-item" data-cat="minimalista">
+                <span class="cat-item-icon">◻️</span>
+                <span class="cat-item-name">Minimalista</span>
+                <span class="cat-item-count">15</span>
+            </a>
+            <a href="?cat=fotos" class="cat-item" data-cat="fotos">
+                <span class="cat-item-icon">📷</span>
+                <span class="cat-item-name">Fotos</span>
+                <span class="cat-item-count">—</span>
+            </a>
+            <a href="?cat=aesthetic" class="cat-item" data-cat="aesthetic">
+                <span class="cat-item-icon">🌙</span>
+                <span class="cat-item-name">Aesthetic</span>
+                <span class="cat-item-count">14</span>
+            </a>
+            <a href="?cat=musica" class="cat-item" data-cat="musica">
+                <span class="cat-item-icon">🎵</span>
+                <span class="cat-item-name">Música</span>
+                <span class="cat-item-count">8</span>
+            </a>
+            <a href="?cat=regalos" class="cat-item" data-cat="regalos">
+                <span class="cat-item-icon">🎁</span>
+                <span class="cat-item-name">Regalos</span>
+                <span class="cat-item-count">9</span>
+            </a>
+        </aside>
+
+        <!-- PRODUCTOS -->
+        <div class="products-area">
+            <div class="products-header">
+                <div class="products-showing">Mostrando <span id="countLabel">12 diseños</span> en <span id="catLabel">Anime</span></div>
+                <select class="sort-select">
+                    <option>Más populares</option>
+                    <option>Menor precio</option>
+                    <option>Mayor precio</option>
+                </select>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">LUMINPRINT</div>
+        <div class="footer-links">
+            <span class="footer-link">Instagram</span>
+            <span class="footer-link">TikTok</span>
+            <span class="footer-link">WhatsApp</span>
+        </div>
+        <div class="footer-copy">© 2026 LuminPrint · Medellín</div>
+    </footer>
+
+    <!-- CHATBOT FLOTANTE -->
+    <div class="chat-float" id="chatFloat">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">💬</div>
+                    <div>
+                        <div class="chat-name">LuminBot</div>
+                        <div class="chat-status">En línea · 24/7</div>
+                    </div>
+                </div>
+                <button class="chat-close" id="chatClose">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="msg bot">
+                    <div class="msg-bubble">¡Hola! 👋 Soy LuminBot. ¿En qué te puedo ayudar hoy?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." />
+                <button id="chatSend">→</button>
+            </div>
+        </div>
+        <button class="chat-btn" id="chatToggle">💬</button>
+    </div>
+
+    <script src="productos.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
