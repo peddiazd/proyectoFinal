@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — LuminPrint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="nav">
+        <div class="logo">LUMI<span>N</span>PRINT</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="galeria.html" class="nav-link">Galería</a>
+            <a href="productos.html" class="nav-link">Productos</a>
+            <a href="contacto.html" class="nav-link active">Contacto</a>
+        </div>
+        <a href="productos.html" class="nav-cta">Personalizar</a>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header center">
+        <div class="section-label">Contacto</div>
+        <h1 class="page-title">¿Hablamos?</h1>
+        <p class="page-sub">Estamos disponibles para resolver todas tus dudas</p>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="contact-content">
+
+        <div class="contact-left">
+            <div class="col-title">Redes y canales</div>
+
+            <a href="https://wa.me/573100000000" target="_blank" class="social-card">
+                <div class="social-icon" style="background:#e8f5e9;">💬</div>
+                <div class="social-info">
+                    <div class="social-name">WhatsApp</div>
+                    <div class="social-handle">+57 310 000 0000</div>
+                </div>
+                <div class="social-arrow">→</div>
+            </a>
+
+            <a href="https://instagram.com/luminprint.co" target="_blank" class="social-card">
+                <div class="social-icon" style="background:#fce4ec;">📸</div>
+                <div class="social-info">
+                    <div class="social-name">Instagram</div>
+                    <div class="social-handle">@luminprint.co</div>
+                </div>
+                <div class="social-arrow">→</div>
+            </a>
+
+            <a href="https://tiktok.com/@luminprint" target="_blank" class="social-card">
+                <div class="social-icon" style="background:#f3e5f5;">🎵</div>
+                <div class="social-info">
+                    <div class="social-name">TikTok</div>
+                    <div class="social-handle">@luminprint</div>
+                </div>
+                <div class="social-arrow">→</div>
+            </a>
+
+            <a href="mailto:hola@luminprint.co" class="social-card">
+                <div class="social-icon" style="background:#e8eaf6;">📧</div>
+                <div class="social-info">
+                    <div class="social-name">Email</div>
+                    <div class="social-handle">hola@luminprint.co</div>
+                </div>
+                <div class="social-arrow">→</div>
+            </a>
+        </div>
+
+        <div class="contact-right">
+            <div class="col-title">Información</div>
+
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                    <div class="info-label">Ubicación</div>
+                    <div class="info-value">Medellín, Antioquia<br>Colombia</div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">⏰</div>
+                <div>
+                    <div class="info-label">Horario de atención</div>
+                    <div class="info-value">Lunes a Viernes<br>8:00am – 6:00pm</div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">🚚</div>
+                <div>
+                    <div class="info-label">Envíos</div>
+                    <div class="info-value">A toda Colombia<br>3 a 5 días hábiles</div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">💳</div>
+                <div>
+                    <div class="info-label">Métodos de pago</div>
+                    <div class="info-value">Nequi · Daviplata · PSE<br>Tarjeta débito y crédito</div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- BANNER CHATBOT -->
+    <section class="response-banner">
+        <div class="response-text">
+            <h4>¿Tienes una duda rápida?</h4>
+            <p>Nuestro chatbot responde al instante, 24 horas al día, 7 días a la semana</p>
+        </div>
+        <button class="response-badge" id="openChat">Chatear ahora →</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">LUMINPRINT</div>
+        <div class="footer-links">
+            <span class="footer-link">Instagram</span>
+            <span class="footer-link">TikTok</span>
+            <span class="footer-link">WhatsApp</span>
+        </div>
+        <div class="footer-copy">© 2026 LuminPrint · Medellín</div>
+    </footer>
+
+    <!-- CHATBOT FLOTANTE -->
+    <div class="chat-float" id="chatFloat">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">💬</div>
+                    <div>
+                        <div class="chat-name">LuminBot</div>
+                        <div class="chat-status">En línea · 24/7</div>
+                    </div>
+                </div>
+                <button class="chat-close" id="chatClose">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="msg bot">
+                    <div class="msg-bubble">¡Hola! 👋 Soy LuminBot. ¿En qué te puedo ayudar hoy?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." />
+                <button id="chatSend">→</button>
+            </div>
+        </div>
+        <button class="chat-btn" id="chatToggle">💬</button>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
